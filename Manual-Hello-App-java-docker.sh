@@ -23,7 +23,7 @@ docker run itproguide/helloworld-java:first
 docker ps -a
 
 # Commit and create a new image with startup command for the application
-docker container commit --change='CMD ["java","-jar","/tmp/helloworld.jar"]' e398cc24d066 itproguide/helloworld-java:second
+docker container commit --change='CMD ["java","-jar","/tmp/helloworld.jar"]' <Docker ID of helloworld-java:first> itproguide/helloworld-java:second
 
 # Verify the image
 docker images
